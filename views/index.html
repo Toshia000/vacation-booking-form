@@ -6,6 +6,27 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <form action="#" method="get">
+    <h1>Book You Dream Vacation</h1>
+    <img src="images/beach.jpeg" alt="Tropical beach during sunset">
+
+    <label for="destination">Destination</label>
+    <select name="destination" id="destination">
+      <option value="">Choose a destination...</option>
+      <option value="bali-indonesia">Bali, Indonesia</option>
+      <option value="paris-france">Paris, France</option>
+      <option value="tokyo-japan">Tokyo, Japan</option>
+      <option value="maldives">Maldives</option>
+      <option value="new-york-city-usa">New York City, USA</option>
+    </select>
+
+    <label for="departure">Departure Date</label>
+    <input type="date" id="departure" name="departure">
+
+    <label for="number-of-travelers">Number of Travelers</label>
+    <input type="number" name="number-of-travelers" id="number-of-travelers">
+
+    <button type="submit">Find My Vacation</button>
+  </form>
 </body>
 </html>
