@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightcyan;
+}
+
+#vacation-booking {
+  flex: 0 1 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "form"
+    "footer";
+}
+
+form {
+  grid-area: form;
+  background-color: white;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "destination"
+    "departure"
+    "number-of-travelers"
+    "submit-button";  
+    
+    @media screen and (min-width: 600px) {
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "destination destination destination destination"
+      "departure departure number-of-travelers number-of-travelers"
+      ". submit-button submit-button .";      
+  }
+}
+
+header {
+  display: grid;
+}
+
+h1 {
+  grid-area: header;
+  justify-self: center;
+  align-self: center;
+  z-index: 1;
+  color: white;
+}
+
+img {
+  grid-area: header;
+}
+
+#destination-group {
+  grid-area: destination;
+  display: flex;
+  flex-direction: column;
+}
+
+#departure-group {
+  grid-area: departure;
+  display: flex;
+  flex-direction: column;
+}
+
+#number-of-travelers {
+  grid-area: number-of-travelers;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  grid-area: submit-button;
+}
+
+footer {
+  grid-area: footer;
+}

@@ -3,30 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Book Your Dream Vacation</title>
+  <link rel="stylesheet" href="styles/booking-form.css">
 </head>
 <body>
-  <form action="#" method="get">
-    <h1>Book You Dream Vacation</h1>
-    <img src="images/beach.jpeg" alt="Tropical beach during sunset">
+  <div id="vacation-booking">
+    <header>
+      <h1>Book Your Dream Vacation</h1> 
+      <img src="images/beach.jpeg" alt="Tropical beach during sunset" width="600px">
+    </header>
+  
+    <form action="#" method="get">
+      <div id="destination-group">
+        <label for="destination">Destination</label>
+        <select name="destination" id="destination">
+          <option value="">Choose a destination...</option>
+          <option value="bali-indonesia">Bali, Indonesia</option>
+          <option value="paris-france">Paris, France</option>
+          <option value="tokyo-japan">Tokyo, Japan</option>
+          <option value="maldives">Maldives</option>
+          <option value="new-york-city-usa">New York City, USA</option>
+        </select>
+      </div>
+  
+      <div id="departure-group">
+        <label for="departure">Departure Date</label>
+        <input type="date" id="departure" name="departure">
+      </div>
+  
+      <div id="number-of-travelers-group">
+        <label for="number-of-travelers">Number of Travelers</label>
+        <input type="number" name="number-of-travelers" id="number-of-travelers">
+      </div>
+  
+      <button type="submit">Find My Vacation</button>
+    </form>
 
-    <label for="destination">Destination</label>
-    <select name="destination" id="destination">
-      <option value="">Choose a destination...</option>
-      <option value="bali-indonesia">Bali, Indonesia</option>
-      <option value="paris-france">Paris, France</option>
-      <option value="tokyo-japan">Tokyo, Japan</option>
-      <option value="maldives">Maldives</option>
-      <option value="new-york-city-usa">New York City, USA</option>
-    </select>
-
-    <label for="departure">Departure Date</label>
-    <input type="date" id="departure" name="departure">
-
-    <label for="number-of-travelers">Number of Travelers</label>
-    <input type="number" name="number-of-travelers" id="number-of-travelers">
-
-    <button type="submit">Find My Vacation</button>
-  </form>
+    <footer>
+      GitHub Repository: <a href="https://github.com/Toshia000/vacation-booking-form">Vacation Booking Form</a>
+    </footer>
+  </div>
 </body>
 </html>
